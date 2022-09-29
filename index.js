@@ -36,10 +36,11 @@ async function tryPayInvoice({ invoice, paymentAmountSats, maxRouteFeeSats, outC
 }
 
 async function handleChannelBalancing({ channel }) {
+    console.log(`Handling channel ${channel.transaction_id}:${channel.transaction_vout}`)
     const currentLocalRatio = channel.local_balance * 1.0 / channel.capacity
     const maxLocalBalance = Math.round(config.MAX_LOCAL_BALANCE_RATIO * channel.capacity)
     if (currentLocalRatio <= maxLocalBalance) {
-        console.log(`Channel is under max local balance. Not doing anything.`)
+        console.log(`Channel is under max local balance. Not doing anything. (local balance: ${channel.local_balance}, max target local balance: ${maxLocalBalance})`)
         return
     }
     console.log(`Channel local balance is ${channel.local_balance} sats, which is above max local balance ${maxLocalBalance}`)
