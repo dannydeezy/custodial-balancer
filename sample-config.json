@@ -1,0 +1,8 @@
+{
+    "TLS_CERT_PATH": "path/to/if/not/default/tls.cert",
+    "MACAROON_PATH": "path/to/if/not/default/admin.macaroon",
+    "SOCKET": "your-lnd-socket-if-not-default:10009",
+    "PEER_PUBKEY": "035e4ff418fc8b5554c5d9eea66396c227bd429a3251c8cbc711002ba215bfc226",
+    "PEER_CUSTODIAL_LNURL": "you@walletofsatoshi.com",
+    "MAX_LOCAL_BALANCE_RATIO": 0.01
+}
