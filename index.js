@@ -39,7 +39,7 @@ async function handleChannelBalancing({ channel }) {
     console.log(`Handling channel ${channel.transaction_id}:${channel.transaction_vout}`)
     const currentLocalRatio = channel.local_balance * 1.0 / channel.capacity
     const maxLocalBalance = Math.round(config.MAX_LOCAL_BALANCE_RATIO * channel.capacity)
-    if (currentLocalRatio <= maxLocalBalance) {
+    if (channel.local_balance <= maxLocalBalance) {
         console.log(`Channel is under max local balance. Not doing anything. (local balance: ${channel.local_balance}, max target local balance: ${maxLocalBalance})`)
         return
     }
