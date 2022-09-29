@@ -1,11 +1,11 @@
 [Unit]
-Description=Deezy Auto Earn
+Description=Custodial Balancer
 [Service]
 User=ubuntu
 
-WorkingDirectory=/home/ubuntu/deezy-auto-earn
+WorkingDirectory=/home/ubuntu/custodial-balancer
 
-ExecStart=/usr/bin/node /home/ubuntu/deezy-auto-earn/index.js
+ExecStart=/usr/bin/node /home/ubuntu/custodial-balancer/index.js
 
 SuccessExitStatus=143
 TimeoutStopSec=10
