@@ -60,7 +60,7 @@ async function handleChannelBalancing({ channel }) {
     const paymentAmountSats = Math.min(Math.max(payServiceParams.min, targetPaymentAmountSats), payServiceParams.max)
 
     console.log(`Will attempt to send ${paymentAmountSats} to peer's custodial wallet`)
-    console.log(`Fetching invoice from ${lnUrlOrAddress} for ${paymentAmountSats} sats`)
+    console.log(`Fetching invoice from ${config.PEER_CUSTODIAL_LNURL} for ${paymentAmountSats} sats`)
     const { invoice } =
         await requestInvoice({
             lnUrlOrAddress: config.PEER_CUSTODIAL_LNURL,
