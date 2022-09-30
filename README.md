@@ -26,7 +26,7 @@ note you may want to make the following edits to the `deezy-custodial-balancer-e
 ```
 sudo cp custodial-balancer-example.service /etc/systemd/system/custodial-balancer.service
 sudo systemctl enable custodial-balancer.service
-sudo systemctl start
+sudo systemctl start custodial-balancer
 ```
 to follow the logs:
 ```
