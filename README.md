@@ -32,3 +32,8 @@ to follow the logs:
 ```
 journalctl -fu custodial-balancer -n 100
 ```
+to stop the service:
+```
+sudo systemctl stop custodial-balancer
+sudo systemctl disable custodial-balancer
+```
