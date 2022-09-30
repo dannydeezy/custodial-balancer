@@ -1,11 +1,11 @@
 [Unit]
 Description=Custodial Balancer
 [Service]
-User=ubuntu
+User=umbrel
 
-WorkingDirectory=/home/ubuntu/custodial-balancer
+WorkingDirectory=/home/umbrel/custodial-balancer
 
-ExecStart=/usr/bin/node /home/ubuntu/custodial-balancer/index.js
+ExecStart=/usr/bin/node /home/umbrel/custodial-balancer/index.js
 
 SuccessExitStatus=143
 TimeoutStopSec=10

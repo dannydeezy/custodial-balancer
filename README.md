@@ -19,7 +19,7 @@ node index.js
 it is recommended to run this as a systemd service.
 
 note you may want to make the following edits to the `deezy-custodial-balancer-example.service ` file:
-- change username from `ubuntu` to your user
+- change username from `umbrel` to your user (you can find your user by running `whoami`)
 - make sure `/usr/bin/node` is your the location of your `node` binary (can find this out by doing `which node`)
 - update `RestartSec` to your desired interval, which will determine how frequently the script runs
 
