@@ -45,7 +45,11 @@ async function handleChannelBalancing({ channel }) {
     }
     console.log(`Channel local balance is ${channel.local_balance} sats, which is above max local balance ${maxLocalBalance}`)
     const targetPaymentAmountSats = channel.local_balance - maxLocalBalance
-    console.log(`Target payment amount is is ${targetPaymentAmountSats}`)
+    console.log(`Target payment amount is ${targetPaymentAmountSats}`)
+    if (config.MIN_PAYMENT_AMOUNT_SATS && targetPaymentAmountSats < config.MIN_PAYMENT_AMOUNT_SATS) {
+        console.log(`Target payment amount is below min payment amount. Not doing anything.`)
+        return
+    }
 
     console.log(`Getting pay service params for ${config.PEER_CUSTODIAL_LNURL}`)
     const payServiceParams = await requestPayServiceParams({
